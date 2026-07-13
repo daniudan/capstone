@@ -2,7 +2,7 @@
   display: grid;
   width: 100%;
   max-width: 1440px;
-  background-color: #edefee;
+  background-color: #ffffff;
   align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
@@ -25,7 +25,6 @@ nav {
   grid-column: 3 / span 8;
   align-items: center;
   height: 122px;
-  background-color: #adfee3;
 }
 
 nav img {
@@ -57,13 +56,21 @@ nav ul li a:hover {
   color: #495e57; /* Berubah warna mengikuti warna background header kamu */
 }
 
-
+.line {
+  display: flex;
+  grid-column: 1 / span 12;
+  height: 441px;
+  background: linear-gradient(to bottom, #495E57 85%, transparent 75%);
+  padding: 0px;
+  margin-left: -70px;
+  margin-right: -70px;
+}
 
 .main-content {
   display: grid;
   grid-column: 3 / span 8;
   align-items: center;
-  background-color: #fece75;
+  margin-top: -441px;
 }
 
 footer {

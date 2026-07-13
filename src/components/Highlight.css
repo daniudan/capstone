@@ -1,0 +1,112 @@
+.highlight-announcement {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.highlight-announcement h2 {
+    font-family: 'Markazi Text';
+    font-size: 64px;
+    font-weight: 500;
+    margin: 0; /* Menghapus margin default atas */
+}
+
+.menu-button {
+    background-color: #f4ce14;
+    color: #000000;
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.highlight-card {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 30px 0px;
+}
+
+.highlight-card-box {
+    background-color: #edefee;
+    border-radius: 16px;
+    min-height: 405px;
+    max-width: 265px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 265px;
+    height: 166px;
+    overflow: hidden; /* Memastikan jika gambar melar, sisanya dipotong rapi */
+    border-radius: 16px; /* Lengkungan pindah ke pembungkus agar konsisten */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Memaksa container ini mengambil semua sisa ruang kosong di bawah gambar */
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-title h3 {
+    font-family: 'Markazi Text';
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-price {
+    font-family: 'Karla';
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff7300; /* Warna jingga harga Little Lemon */
+    margin: 0;
+}
+
+.card-description-text {
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-order-container {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+}
+
+.card-order {
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.delivery-icon {
+    margin-left: 10px;
+}

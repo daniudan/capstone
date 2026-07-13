@@ -1,14 +1,10 @@
-.hero{
+.hero {
+    display: flex;
     width: 100%;
     height: 441px;
-    background-color: #838dff;
-
-        /* UBAH MENJADI GRID MURNI */
-    display: flex;
-    /* Membuat semua konten di dalamnya rata tengah secara vertikal */
-    align-items: center;
+    padding-top: 40px;
     justify-content: space-between;
-
+    box-sizing: border-box;
 }
 
 .hero-image img {
@@ -29,6 +25,7 @@
   /* Memastikan titik potong fokus tepat di tengah-tengah gambar */
   object-position: center;
   border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
 
 .hero-description {
@@ -42,6 +39,7 @@
   font-size: 64px;
   font-weight: 500;
   color: #f4fe14;
+  margin: 0; /* Menghapus margin default atas */
 }
 
 .hero-location {
@@ -49,6 +47,8 @@
   font-size: 40px;
   font-weight: 500;
   color: #edefee;
+  margin-top: -15px; /* Memberikan jarak antara judul dan lokasi */
+  margin-bottom: 25px; /* Memberikan jarak antara lokasi dan teks deskripsi */
 }
 
 .hero-description-text {
@@ -57,5 +57,17 @@
   font-weight: 800;
   color: #edefee;
   margin-top: 16px; /* Memberikan jarak antara teks deskripsi dan lokasi */
+  margin-bottom: 16px;
 }
 
+.reserve-button {
+  background-color: #f4ce14;
+  color: #000000;
+  font-family: 'Karla';
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}

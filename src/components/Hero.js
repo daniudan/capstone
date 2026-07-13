@@ -11,7 +11,7 @@ function Hero() {
             <p className="hero-description-text">
               We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
             </p>
-            <button>Reserve a Table</button>
+            <button className="reserve-button">Reserve a Table</button>
         </div>
         <div className="hero-image">
         <img src={restaurantFoodImg} alt="Hero" />
