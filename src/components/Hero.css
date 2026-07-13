@@ -1,0 +1,61 @@
+.hero{
+    width: 100%;
+    height: 441px;
+    background-color: #838dff;
+
+        /* UBAH MENJADI GRID MURNI */
+    display: flex;
+    /* Membuat semua konten di dalamnya rata tengah secara vertikal */
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hero-image img {
+  /* 1. Responsif untuk Mobile: Mengambil lebar 100% dari container pembungkusnya */
+  width: 100%;
+  height: auto;
+
+  /* 2. Kunci Kotak Presisi: Menjaga rasio gambar tetap kotak 1:1 saat responsif */
+  aspect-ratio: 1 / 1;
+
+  /* 3. Batasan Desktop: Ukuran tidak akan pernah melebihi 376px */
+  max-width: 376px;
+  max-height: 376px;
+
+  /* 4. POTONG TENGAH (CROP CENTER): */
+  /* Memotong gambar secara proporsional tanpa membuatnya gepeng/distorsi */
+  object-fit: cover;
+  /* Memastikan titik potong fokus tepat di tengah-tengah gambar */
+  object-position: center;
+  border-radius: 16px;
+}
+
+.hero-description {
+  grid-column: 3 / span 5;
+  /* KODE KUNCI 1: Menyuruh teks mengambil semua sisa ruang yang ada */
+  max-width: 293px;
+}
+
+.hero-description h1 {
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  font-weight: 500;
+  color: #f4fe14;
+}
+
+.hero-location {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-weight: 500;
+  color: #edefee;
+}
+
+.hero-description-text {
+  font-family: 'Karla';
+  font-size: 20px;
+  font-weight: 800;
+  color: #edefee;
+  margin-top: 16px; /* Memberikan jarak antara teks deskripsi dan lokasi */
+}
+
