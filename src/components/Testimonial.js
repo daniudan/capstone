@@ -3,9 +3,9 @@ import './Testimonial.css';
 
 function Testimonial() {
   return (
-    <>
+    <div className="testimonial">
       <p>Testimonial Content</p>
-    </>
+    </div>
   );
 }
 
