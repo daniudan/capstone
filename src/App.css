@@ -86,3 +86,62 @@ button:hover {
   background-color: #495e57;
   color: #ffffff;
 }
+
+/* ==========================================================
+   ─── RESPONSIVE STYLE (UNTUK LAYAR HP & TABLET < 768px) ───
+   ========================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Ubah struktur Grid Utama di .App menjadi 1 kolom penuh */
+  .App {
+    grid-template-columns: 1fr; 
+    padding: 0px 20px; /* Kurangi padding samping dari 70px menjadi 20px agar hemat ruang */
+  }
+
+  /* 2. Paksa semua elemen besar untuk mengambil 1 kolom penuh */
+  header, nav, .main-content, footer {
+    grid-column: 1 / -1; 
+  }
+
+  /* 3. Atur ulang Navigasi agar menumpuk ke bawah */
+  nav {
+    flex-direction: column; /* Menu menyusun vertikal ke bawah */
+    height: auto; /* Hapus tinggi 122px agar fleksibel mengikuti konten */
+    padding: 20px 0px;
+    gap: 15px; /* Beri jarak antara logo dan menu link */
+  }
+
+  nav img {
+    height: 45px; /* Sedikit perkecil ukuran logo agar tidak terlalu besar di HP */
+  }
+
+  /* 4. Atur daftar list menu agar rapi bertumpuk */
+  nav ul {
+    flex-direction: column; /* List menu berjejer ke bawah */
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    gap: 10px; /* Jarak antar link menu */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Perkecil ukuran teks sedikit agar pas di layar kecil */
+    padding: 6px 0px;
+    display: block;
+  }
+
+  /* 5. KUNCI UTAMA: Sesuaikan .line & .main-content dengan padding .App yang baru */
+  .line {
+    grid-column: 1 / -1;
+    /* Margin kiri-kanan disesuaikan dengan padding .App (20px) agar background hijau tetap penuh semata-mata menyentuh ujung layar HP */
+    margin-left: -20px;
+    margin-right: -20px; 
+    height: auto; /* Biarkan tinggi menyesuaikan konten Hero di dalamnya */
+    min-height: 400px; 
+  }
+
+  .main-content {
+    /* Sesuaikan margin-top negatif agar mengikuti tinggi container .line yang baru */
+    margin-top: 0px; /* Di HP sebaiknya dinetralkan (0px) agar layout Hero dan isi konten tidak saling bertubrukan parah */
+  }
+}
