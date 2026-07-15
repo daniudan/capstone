@@ -1,16 +1,20 @@
-import React from 'react';
-import Hero from './components/Hero';
-import Highlight from './components/Highlight';
-import Testimonial from './components/Testimonial';
-import About from './components/About';
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './Homepage';
+import BookingPage from './BookingPage';
 
 function Main() {
   return (
     <main className="main-content">
-      <Hero />
-      <Highlight />
-      <Testimonial />
-      <About />
+      {/* 4. TAMBAHKAN KONTROL RUTING DI SINI */}
+      <Routes>
+        {/* Jalur utama ("/") akan menampilkan semua komponen beranda */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="/reservation" element={<BookingPage />} />
+        <Route path="/about" element={<Homepage />} />
+        <Route path="/menu" element={<Homepage />} />
+        <Route path="/order-online" element={<Homepage />} />
+        <Route path="/login" element={<Homepage />} />
+      </Routes>
     </main>
   );
 }

@@ -1,16 +1,16 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
     <nav>
-        <img src="./logollrectangle.svg" alt="logo" class="nav logo" />
-        <ul class="nav menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#reservation">Reservation</a></li>
-          <li><a href="#order-online">Order Online</a></li>
-          <li><a href="#login">Login</a></li>
+        <img src="./logollrectangle.svg" alt="logo" className="nav logo" />
+        <ul className="nav menu">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/menu">Menu</Link></li>
+          <li><Link to="/reservation">Reservation</Link></li>
+          <li><Link to="/order-online">Order Online</Link></li>
+          <li><Link to="/login">Login</Link></li>
         </ul>
     </nav>
   );
