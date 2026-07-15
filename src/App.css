@@ -44,16 +44,15 @@ nav ul {
 nav ul li a {
   /* KODE INI: Menghilangkan garis bawah */
   text-decoration: none;
-  /* KODE INI: Mengubah warna teks link (ganti sesuai desain Figmamu, misal hitam) */
   color: #000000;
   font-family: 'Karla';
   font-size: 18px;
-  font-weight: 500; /* Opsional: Membuat tulisan sedikit lebih tebal */
-  transition: color 0.2s ease; /* Opsional: Efek halus saat di-hover */
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
-  color: #495e57; /* Berubah warna mengikuti warna background header kamu */
+  color: #495e57;
 }
 
 .line {
