@@ -1,4 +1,11 @@
+.highlight {
+    grid-column: 1 / span 13;
+    grid-template-columns: subgrid;
+    display: grid;
+}
+
 .highlight-announcement {
+    grid-column: 3 / span 8;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -26,6 +33,7 @@
 }
 
 .highlight-card {
+    grid-column: 3 / span 8;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;

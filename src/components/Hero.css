@@ -1,10 +1,26 @@
 .hero {
-    display: flex;
+    grid-column: 1 / 13;
+    grid-template-columns: subgrid;
+    display: grid;
     width: 100%;
+    max-width: 1440px;
+    margin: 0 -70px;
     height: 441px;
     padding-top: 40px;
-    justify-content: space-between;
+    justify-content: center;
+    background: linear-gradient(to bottom, #495E57 85%, transparent 75%);
+    
     box-sizing: border-box;
+}
+
+.hero-container {
+  /* Mengembalikan konten ke dalam batas grid 1440px / 12 kolom */
+  grid-column: 3 / span 8;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .hero-image img {
@@ -29,8 +45,6 @@
 }
 
 .hero-description {
-  grid-column: 3 / span 5;
-  /* KODE KUNCI 1: Menyuruh teks mengambil semua sisa ruang yang ada */
   max-width: 293px;
 }
 
@@ -71,3 +85,4 @@
   border-radius: 16px;
   cursor: pointer;
 }
+

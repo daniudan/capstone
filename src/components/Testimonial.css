@@ -1,3 +1,6 @@
 .testimonial {
+    grid-column: 3 / 11;
+    grid-template-columns: subgrid;
+    display: grid;
     background-color: rgb(111, 111, 111);
 }

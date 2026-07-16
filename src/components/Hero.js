@@ -5,6 +5,7 @@ import restaurantFoodImg from './restauranfood.jpg';
 function Hero() {
   return (
     <section className="hero">
+      <div className="hero-container">
         <div className="hero-description">
         <h1>Little Lemon</h1>
             <p className="hero-location">Chicago</p>
@@ -16,6 +17,7 @@ function Hero() {
         <div className="hero-image">
           <img src={restaurantFoodImg} alt="Hero" />
         </div>
+      </div>
     </section>
   );
 }
