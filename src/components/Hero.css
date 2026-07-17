@@ -5,7 +5,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 -70px;
-    height: 441px;
+    height: 100%;
     padding-top: 40px;
     justify-content: center;
     background: linear-gradient(to bottom, #495E57 85%, transparent 75%);
@@ -97,5 +97,32 @@
 }
   .hero-container {
     grid-column: 2 / span 10; 
+  }
+}
+
+@media screen and (max-width: 900px) {
+.hero {
+    grid-column: 1 / -1;
+    margin: 0 -40px;
+    height: auto;
+    padding-top: 40px 20px;
+}
+  .hero-container {
+    grid-column: 1 / -1; 
+    flex-direction: column; /* BARU: Menyusun konten (teks & gambar) ke bawah */
+    align-items: center;    /* BARU: Memposisikan semua konten di tengah secara horizontal */
+         /* BARU: Membuat teks di dalamnya rata tengah */
+    gap: 32px;              /* BARU: Memberi jarak yang cukup antara teks dan gambar */
+  }
+
+  .hero-description {
+    max-width: 300px; /* BARU: Melepas batasan lebar di layar kecil agar teks bisa memanfaatkan ruang */
+    width: 100%;
+  
+  }
+
+  .hero-image img {
+    max-width: 280px;  /* BARU: Opsional, mengecilkan ukuran maksimal gambar di mobile agar pas di layar */
+    max-height: 280px; 
   }
 }

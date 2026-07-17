@@ -94,6 +94,10 @@ button:hover {
   header, nav, .main-content, footer {
     grid-column: 1 / span 12; 
   }
+    nav {
+    gap: 15px; /* Beri jarak antara logo dan menu link */
+    grid-column: 2 / span 10;
+  }
 }
 
 /* ==========================================================
@@ -113,12 +117,7 @@ button:hover {
   }
 
   /* 3. Atur ulang Navigasi agar menumpuk ke bawah */
-  nav {
-    flex-direction: column; /* Menu menyusun vertikal ke bawah */
-    height: auto; /* Hapus tinggi 122px agar fleksibel mengikuti konten */
-    padding: 20px 0px;
-    gap: 15px; /* Beri jarak antara logo dan menu link */
-  }
+
 
   nav img {
     height: 45px; /* Sedikit perkecil ukuran logo agar tidak terlalu besar di HP */
