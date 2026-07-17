@@ -91,7 +91,7 @@ button:hover {
     Paksa Header, Nav, Main, dan Footer untuk melebar 
     mengisi penuh seluruh 12 kolom (dari kolom 1 sampai akhir)
   */
-  header, nav, .main-content, footer {
+  header, .main-content, footer {
     grid-column: 1 / span 12; 
   }
     nav {
@@ -103,7 +103,7 @@ button:hover {
 /* ==========================================================
    ─── RESPONSIVE STYLE (UNTUK LAYAR HP & TABLET < 768px) ───
    ========================================================== */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
   /* 1. Ubah struktur Grid Utama di .App menjadi 1 kolom penuh */
   .App {

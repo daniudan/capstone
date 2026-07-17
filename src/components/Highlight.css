@@ -125,7 +125,7 @@
 @media screen and (max-width: 1200px) {
 .highlight {
     grid-column: 1 / 13;
-    margin: 0 -40px;
+    margin: 0;
 }
 .highlight-announcement {
     grid-column: 2 / span 10; 
