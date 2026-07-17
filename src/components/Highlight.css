@@ -142,7 +142,6 @@
   .highlight {
     grid-column: 1 / -1;
     margin: 0;
-    padding: 20px; /* Memberikan ruang napas di sisi kanan dan kiri layar */
   }
 
   /* 1. Menyusun Header Highlight ke bawah */
@@ -151,12 +150,10 @@
     flex-direction: column; /* Membuat judul & tombol menyusun ke bawah */
     gap: 20px;              /* Jarak antara judul dan tombol */
     text-align: center;     /* Membuat teks rata tengah */
-    margin: 30px 0;
+    margin: 10px 0;
   }
 
-  .highlight-announcement h2 {
-    font-size: 48px; /* Mengecilkan sedikit ukuran font agar pas di layar HP */
-  }
+  
 
   /* 2. Menyusun Kartu Menu (Cards) ke bawah */
   .highlight-card {
@@ -165,6 +162,15 @@
     align-items: center;    /* Memposisikan kartu tepat di tengah */
     gap: 30px;              /* Jarak antar kartu */
     margin: 20px 0;
+    width: auto;
   }
+  .highlight-card-box {
+    min-height: 405px;
+    max-width: 500px;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+}
 
 }

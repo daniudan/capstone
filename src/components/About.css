@@ -1,6 +1,6 @@
 .about {
-    grid-column: 3 / 11;
+    grid-column: 1/ -1;
     grid-template-columns: subgrid;
-    display: grid;
+    display: flex;
     background-color: rgb(85, 94, 121);
 }
