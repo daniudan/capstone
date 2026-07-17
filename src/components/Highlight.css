@@ -36,8 +36,10 @@
     grid-column: 3 / span 8;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     box-sizing: border-box;
     margin: 30px 0px;
+    width: 100%;
 }
 
 .highlight-card-box {
@@ -47,10 +49,12 @@
     max-width: 265px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    flex: 1 1 250px;
 }
 
 .card-image {
-    width: 265px;
+    width: 100%;
     height: 166px;
     overflow: hidden; /* Memastikan jika gambar melar, sisanya dipotong rapi */
     border-radius: 16px; /* Lengkungan pindah ke pembungkus agar konsisten */
@@ -58,8 +62,7 @@
 
 .card-image img {
     width: 100%;
-    height: auto;
-    border-radius: 16px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -117,4 +120,18 @@
 
 .delivery-icon {
     margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+.highlight {
+    grid-column: 1 / 13;
+    margin: 0 -40px;
+}
+.highlight-announcement {
+    grid-column: 2 / span 10; 
+}
+
+.highlight-card {
+    grid-column: 2 / span 10; 
+  }
 }

@@ -39,6 +39,7 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0px 20px;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -75,6 +76,24 @@ footer {
 button:hover {
   background-color: #495e57;
   color: #ffffff;
+}
+
+/* ==========================================================
+   ─── RESPONSIVE MID-SCREEN (DI BAWAH 1200px HINGGA 769px) ───
+   ========================================================== */
+@media screen and (max-width: 1200px) {
+  .App {
+    /* Kurangi sedikit padding luar agar konten punya lebih banyak ruang */
+    padding: 0px 40px; 
+  }
+
+  /* 
+    Paksa Header, Nav, Main, dan Footer untuk melebar 
+    mengisi penuh seluruh 12 kolom (dari kolom 1 sampai akhir)
+  */
+  header, nav, .main-content, footer {
+    grid-column: 1 / span 12; 
+  }
 }
 
 /* ==========================================================
@@ -120,18 +139,9 @@ button:hover {
     display: block;
   }
 
-  /* 5. KUNCI UTAMA: Sesuaikan .line & .main-content dengan padding .App yang baru */
-  .line {
-    grid-column: 1 / -1;
-    /* Margin kiri-kanan disesuaikan dengan padding .App (20px) agar background hijau tetap penuh semata-mata menyentuh ujung layar HP */
-    margin-left: -20px;
-    margin-right: -20px; 
-    height: auto; /* Biarkan tinggi menyesuaikan konten Hero di dalamnya */
-    min-height: 400px; 
-  }
-
+ 
   .main-content {
     /* Sesuaikan margin-top negatif agar mengikuti tinggi container .line yang baru */
-    margin-top: 0px; /* Di HP sebaiknya dinetralkan (0px) agar layout Hero dan isi konten tidak saling bertubrukan parah */
+    margin: 0px; /* Di HP sebaiknya dinetralkan (0px) agar layout Hero dan isi konten tidak saling bertubrukan parah */
   }
 }
