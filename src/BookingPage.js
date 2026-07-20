@@ -1,10 +1,9 @@
-import React from 'react';
+import BookingForm from './components/BookingForm'
 
 function BookingPage() {
   return (
     <>
-        <div className="booking-page">Booking Page</div>
-      
+      <BookingForm />
     </>
   );
 }

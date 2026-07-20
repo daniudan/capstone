@@ -5,9 +5,7 @@ import BookingPage from './BookingPage';
 function Main() {
   return (
     <main className="main-content">
-      {/* 4. TAMBAHKAN KONTROL RUTING DI SINI */}
       <Routes>
-        {/* Jalur utama ("/") akan menampilkan semua komponen beranda */}
         <Route path="/" element={<Homepage />} />
         <Route path="/reservation" element={<BookingPage />} />
         <Route path="/about" element={<Homepage />} />

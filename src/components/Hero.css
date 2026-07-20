@@ -6,10 +6,9 @@
     max-width: 1440px;
     margin: 0 -70px;
     height: 100%;
-    padding-top: 40px;
+    padding-top: 30px;
     justify-content: center;
-    background: linear-gradient(to bottom, #495E57 85%, transparent 75%);
-    
+    background: linear-gradient(to bottom, #495E57 90%, transparent 75%);
     box-sizing: border-box;
 }
 
@@ -93,10 +92,9 @@
     grid-column: 1 / 13;
     margin: 0 -40px;
     height: 441px;
-    padding-top: 40px;
 }
   .hero-container {
-    grid-column: 2 / span 10; 
+    grid-column: 2 / span 10;
   }
 }
 
@@ -104,11 +102,11 @@
 .hero {
     grid-column: 1 / -1;
     height: auto;
-    padding-top: 40px 20px;
+    padding: 20px 0;
 }
 
   .hero-container {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     flex-direction: column; /* BARU: Menyusun konten (teks & gambar) ke bawah */
     align-items: center;    /* BARU: Memposisikan semua konten di tengah secara horizontal */
          /* BARU: Membuat teks di dalamnya rata tengah */
