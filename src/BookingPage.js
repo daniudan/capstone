@@ -1,9 +1,13 @@
 import BookingForm from './components/BookingForm'
 
-function BookingPage() {
+function BookingPage({ bookedState, dispatch }) {
   return (
     <>
-      <BookingForm />
+    {/* 2. Oper kembali props tersebut ke BookingForm */}
+      <BookingForm
+        bookedState={bookedState}
+        dispatch={dispatch}
+      />
     </>
   );
 }
