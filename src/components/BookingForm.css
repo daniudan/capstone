@@ -1,0 +1,165 @@
+/* ==========================================
+   1. CONTAINER UTAMA (Centering Halaman Grid)
+   ========================================== */
+.booking-container {
+  display: flex;
+  grid-column: 3 / span 8;
+  flex-direction: column;
+  justify-content: center; /* Center vertikal */
+  align-items: center;     /* Center horizontal */
+  align-self: center;      /* Pengetengan khusus anak Grid */
+  justify-self: center;    /* Pengetengan khusus anak Grid */
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Memastikan form dan section reservasi memenuhi lebar container */
+.booking-form,
+.reservations-section {
+  width: 100%;
+}
+
+/* ==========================================
+   2. STYLING FORM & FIELDSET
+   ========================================== */
+.booking-fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.booking-legend {
+  font-family: 'Markazi Text', serif;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  color: #495e57; /* Little Lemon Primary Green */
+  line-height: 1;
+}
+
+/* Input Group */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.form-field input,
+.form-field select {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fdfdfd;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #495e57;
+  box-shadow: 0 0 0 3px rgba(73, 94, 87, 0.15);
+}
+
+/* Submit Button */
+.submit-btn {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 0.75rem;
+  padding: 0.85rem;
+  background-color: #f4ce14; /* Little Lemon Yellow */
+  color: #333333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #e0bd10;
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  background-color: #e0e0e0;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   3. STYLING TABEL RESERVASI
+   ========================================== */
+.reservations-section {
+  margin-top: 2rem;
+}
+
+.reservations-section h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #495e57;
+  text-align: center;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #ffffff;
+  font-family: 'Karla', sans-serif;
+}
+
+.reservations-table th,
+.reservations-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 16px;
+}
+
+.reservations-table th {
+  background-color: #495e57;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.reservations-table td {
+  font-weight: 500;
+  color: #333333;
+}
+
+.reservations-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reservations-table tr:hover {
+  background-color: #f9f9f9;
+}

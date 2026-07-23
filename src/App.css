@@ -66,11 +66,12 @@ nav ul li a:hover {
 
 footer {
   display: grid;
-  grid-column: 3 / span 8;
+  grid-column: 1 / -1;
   justify-content: center;
   align-items: center;
   gap: 20px;
   background-color: #495e57;
+  margin: 0 -70px;
 }
 
 button:hover {
@@ -141,7 +142,4 @@ button:hover {
     padding: 6px 0px;
     display: block;
   }
-
- 
-  
 }

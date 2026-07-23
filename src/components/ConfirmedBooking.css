@@ -1,0 +1,49 @@
+.confirmed-booking-container {
+  display: flex;
+  grid-column: 4 / span 6;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #495e57; /* Hijau Little Lemon agar teks terang kontras */
+  padding: 60px 20px;
+  border-radius: 16px;
+  max-width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.confirmed-booking-container h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: 500;
+  color: #f4fe14;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.confirmed-booking-container p {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #edefee;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Penyesuaian Responsif untuk Layar HP */
+@media screen and (max-width: 768px) {
+  .confirmed-booking-container {
+    padding: 40px 16px;
+    margin: 20px 16px;
+  }
+
+  .confirmed-booking-container h1 {
+    font-size: 48px;
+  }
+
+  .confirmed-booking-container p {
+    font-size: 18px;
+  }
+}
