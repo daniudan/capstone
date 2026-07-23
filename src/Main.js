@@ -2,24 +2,26 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import React, { useReducer } from 'react';
 import Homepage from './Homepage';
 import BookingPage from './BookingPage';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 /* global fetchAPI, submitAPI */
 
-// 1. Inisialisasi jam menggunakan API untuk tanggal hari ini
+// PASTIKAN ADA KATA 'export' DI SINI:
 export const initializeTimes = () => {
   const today = new Date();
   if (typeof fetchAPI !== 'undefined') {
     return fetchAPI(today);
   }
-  // Fallback jika script API belum termuat
   return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
 };
 
-// 2. Reducer untuk memperbarui ketersediaan jam berdasarkan tanggal yang dipilih
+// PASTIKAN ADA KATA 'export' DI SINI JUGA:
 export const updateTimes = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES': {
-      const selectedDate = new Date(action.payload);
+      const [year, month, day] = action.payload.split('-');
+      const selectedDate = new Date(year, month - 1, day);
+
       if (typeof fetchAPI !== 'undefined') {
         return fetchAPI(selectedDate);
       }
@@ -34,20 +36,23 @@ function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
   const navigate = useNavigate();
 
-  // 3. Fungsi submit form yang menggunakan submitAPI
   const submitForm = (formData) => {
     if (typeof submitAPI !== 'undefined') {
       const isSubmitted = submitAPI(formData);
       if (isSubmitted) {
-        navigate('/booking-confirmed'); // atau arahkan sesuai kebutuhan
+        navigate('/booking-confirmed');
       }
+    } else {
+      navigate('/booking-confirmed');
     }
   };
+
   return (
     <main className="main-content">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/reservation"
+        <Route
+          path="/reservation"
           element={
             <BookingPage
               availableTimes={availableTimes}
@@ -56,6 +61,7 @@ function Main() {
             />
           }
         />
+        <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
         <Route path="/about" element={<Homepage />} />
         <Route path="/menu" element={<Homepage />} />
         <Route path="/order-online" element={<Homepage />} />
